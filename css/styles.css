@@ -1,17 +1,36 @@
-*{
+@font-face {
+    font-family: oswald-light;
+    src: url(../fonts/fonts/Oswald-Light.ttf);
+}
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root{
-    --height-full: 100vh
+:root {
+    --height-full: 100vh;
+    --color-light: #f4f4f4;
+    --color-dark: #222222;
+    --color-orange: #ff6600;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    font-family: oswald-light;
 }
 
+ul, ol{
+    list-style: none;
+}
 
-.hero{
+.hero {
+
+    color: var(--color-light);
     background-image: url(../images/motos/josh-marshall-7waHOTcvcT4-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,22 +38,37 @@ html{
     height: var(--height-full);
 }
 
-.box{
+.header-hero{
+    height: 100px;
+    padding-inline: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-hero-list{
+    display: flex;
+    gap:var(--spacing-lg)
+}
+
+.cta{
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: var(--spacing-md);
+
+}
+
+.box {
     height: var(--height-full);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+a{
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: 700;
+}
+a:hover{
+    color: var(--color-orange);
+}
